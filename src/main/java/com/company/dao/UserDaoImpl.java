@@ -45,7 +45,6 @@ public class UserDaoImpl implements UserDao {
 	            preparedStatement.setString(3, user.getPassword());
 
 	            int rowsAffected = preparedStatement.executeUpdate();
-	            System.out.println("data store hua");
 	            return rowsAffected > 0;
 	        } catch (SQLException e) {
 	            e.printStackTrace();

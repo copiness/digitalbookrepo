@@ -20,26 +20,18 @@
 </head>
 <body>
 <%
-    // Retrieve the existing session or return null if there is no current session
     HttpSession session1 = request.getSession(false);
-
-    // Check if the session exists and the "username" attribute is set
     if (session1 != null && session1.getAttribute("username") != null) {
-        // Retrieve the username from the session
         String username = (String) session1.getAttribute("username");
 %>
-        <!-- Display the welcome message with the username -->
         <div class="container">
             <h1>Welcome <%= username %></h1>
         </div>
 <%
     } else {
-        // Debugging information
         out.println("Session not found or username not set. Redirecting to login page.");
-        
-        // Redirect to login page if session or username is not available
         response.sendRedirect("login.jsp");
-        return; // Important to exit the script to avoid rendering the rest of the page
+        return; 
     }
 %>
 </body>
