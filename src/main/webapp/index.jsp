@@ -8,7 +8,7 @@
 <%@include file="all_component/allcss.jsp"%>
 <style type="text/css">
 .back-img {
-    background: url("img/pic.jpg");
+    background: url("img/book.jpeg");
     height: 70vh;
     width: 100%;
     backgrund-repeat: no-repeat;
@@ -42,7 +42,7 @@
                             <!-- Update href attributes to point to actual pages or actions -->
                             <a href="addToCart.jsp?bookId=1" class="btn btn-danger btn-sm ml-2">
                                 <i class="fa-solid fa-cart-shopping"></i>Add Cart</a>
-                            <a href="viewDetails.jsp?bookId=1" class="btn btn-primary btn-sm ml-1">View Details</a>
+                            <a href="view_books.jsp" class="btn btn-primary btn-sm ml-1">View Details</a>
                             <a href="#" class="btn btn-danger btn-sm ml-1">399</a>
                         </div>
                     </div>
