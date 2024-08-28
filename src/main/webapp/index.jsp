@@ -8,15 +8,14 @@
 <%@include file="all_component/allcss.jsp"%>
 <style type="text/css">
 .back-img {
-    background: url("img/book.jpeg");
-    height: 70vh;
+    background: url("img/bk.jpg");
+    height: 80vh;
     width: 100%;
     backgrund-repeat: no-repeat;
     background-size: cover;
 }
 
-.crd-ho:hover {
-    background-color: #eeeee4;
+
 }
 </style>
 </head>
@@ -25,7 +24,103 @@
     <div class="container-fluid back-img">
         <h2 class="text-center">Digital Book Repository</h2>
     </div>
+<div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page with Sidebar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Main content container */
+        .main-content {
+            margin-left: 250px; /* Adjust based on sidebar width */
+            padding: 20px;
+            transition: margin-left 0.3s;
+        }
 
+        /* Sidebar container */
+        .sidebar {
+            height: 100%;
+            width: 110px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color:#483D8B;
+            padding-top: 20px;
+            transition: width 0.3s;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Sidebar links */
+        .sidebar a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #ffffff;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #696969;
+        }
+
+        /* Collapsed sidebar */
+        .sidebar.collapsed {
+            width: 80px;
+        }
+
+        .sidebar.collapsed a {
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        .sidebar.collapsed a span {
+            display: none;
+        }
+
+        /* Collapsed main content */
+        .main-content.collapsed {
+            margin-left: 80px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <a href="#"><i class="fa-solid fa-house"></i><span> Home</span></a>
+    <a href="#"><i class="fa-solid fa-book-open"></i><span> New Book</span></a>
+    <a href="#"><i class="fa-solid fa-clock"></i><span> Recent Book</span></a>
+    <a href="#"><i class="fa-solid fa-cog"></i><span> Settings</span></a>
+    <a href="#"><i class="fa-solid fa-address-book"></i><span> Contact Us</span></a>
+</div>
+
+<div class="main-content" id="mainContent">
+   
+    
+    <button class="btn btn-primary" onclick="toggleSidebar()">side here</button>
+</div>
+
+<script>
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("collapsed");
+        document.getElementById("mainContent").classList.toggle("collapsed");
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+</div>
     <!-- Start Recent book -->
     
     <div class="container">
