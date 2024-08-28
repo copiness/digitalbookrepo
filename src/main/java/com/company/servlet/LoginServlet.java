@@ -38,6 +38,10 @@ public class LoginServlet extends HttpServlet {
             //System.out.println("Hi - "+username);
         } else {
             response.sendRedirect("login.jsp?error=1");
+<<<<<<< HEAD
+=======
+        	System.out.println("Error hogaya");
+>>>>>>> e205685571f927cb0b17fa13d51b003ad229f9ca
         }
 	}
 
