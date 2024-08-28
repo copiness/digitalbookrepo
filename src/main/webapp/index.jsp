@@ -8,7 +8,7 @@
 <%@include file="all_component/allcss.jsp"%>
 <style type="text/css">
 .back-img {
-    background: url("img/bk.jpg");
+    background: url("img/bk.jpeg");
     height: 80vh;
     width: 100%;
     backgrund-repeat: no-repeat;

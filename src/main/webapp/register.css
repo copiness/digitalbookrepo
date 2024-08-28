@@ -1,0 +1,71 @@
+@charset "ISO-8859-1";
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow: hidden; /* Ensure the form stays within the viewport */
+}
+
+/* Apply the blur effect to the background image using a pseudo-element */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(8px); /* Apply the blur effect */
+    z-index: -1; /* Keep the blurred background behind the form container */
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+    padding: 30px; /* Increase padding for more space inside the form */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 500px; /* Increase max-width to make the form container bigger */
+    width: 100%;
+    z-index: 1; /* Ensure the form is above the blurred background */
+    position: relative;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding is considered in width */
+}
+
+button {
+    padding: 15px 20px; /* Increase padding for the button */
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #218838;
+}
