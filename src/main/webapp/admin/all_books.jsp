@@ -56,7 +56,7 @@
                     BookDao bookDao = new BookDaoImpl(DBConnection.getConnection());
                     List<Books> book = bookDao.getAllBooks();
 
-                    for (Books books : book) {
+                    for (Books books : books) {
                 %>
                 <tr>
                     <td><%= books.getBookId()%></td>
