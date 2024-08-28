@@ -23,7 +23,7 @@
                         <h3 class="text-center">Edit Books</h3>
                         <%
                             Integer id = Integer.parseInt(request.getParameter("id"));
-                            BookDAO bookDao = new BookDAOimpl(DBConnection.getConnection());
+                            BooksDAO booksDao = new BookDAOimpl(DBConnection.getConnection());
                             Books b = bookDao.getBookById(id);
                         %>
                         <form action="../edit_book" method="post">
