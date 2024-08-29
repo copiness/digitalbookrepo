@@ -47,7 +47,7 @@ public class BookDtls {
 	public String getPrice() {
 		return price;
 	}
-	public void setPrice(String price) {
+public void setPrice(String price) {
 		this.price = price;
 	}
 	public String getBookCategory() {
